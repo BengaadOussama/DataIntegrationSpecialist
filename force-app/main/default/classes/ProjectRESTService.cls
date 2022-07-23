@@ -15,7 +15,7 @@ global class ProjectRESTService {
     String	OpportunityId, 
     Date	StartDate, 
     Date	EndDate, 
-    Double	Amount, 
+    Decimal	Amount, 
     String	Status) {
         Project__c project = new Project__c();
         project.ProjectRef__c = ProjectRef;
