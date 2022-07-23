@@ -20,11 +20,6 @@ public class BillingCalloutService {
             BillingServiceProxy.InvoicesPortSoap11 soapCallout = new BillingServiceProxy.InvoicesPortSoap11();
             String result = soapCallout.billProject(p);
 
-            if(result == 'ok'){
-                Project__c pr = [select id FROM project__c where ProjectRef__c = :ProjectRef];
-                pr.Status__c = 'Billed';
-                UPDATE pr;
-            }
         }
     }
 }
